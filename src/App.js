@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from './Components/Button';
 import ShowLap from './Components/ShowLap';
+import Container from './Components/Container';
 import './App.css';
 
 function App() {
@@ -15,11 +16,25 @@ function App() {
   }
 
   return (
-    <div>
-      <ShowLap laps={numLaps} />
-      <Button onClick={increment}>+</Button>
-      <Button onClick={decrement}>-</Button>
-    </div>
+    <Container>
+      <div className="box">
+        <div className="laps">
+          <ShowLap laps={numLaps} />
+        </div>
+        <div className="span">
+          <Button onClick={decrement}>
+            <i class="material-icons">remove</i>
+          </Button>
+          <Button onClick={increment}>
+            <i class="material-icons">add</i>
+          </Button>
+        </div>
+      </div>
+      <div>
+
+      </div>
+    </Container>
+      
   );
 }
 
