@@ -1,8 +1,16 @@
+div.footer {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
 div.footer h1{
   font-weight: bold;
-  font-size: 40px
+  font-size: 35px;
 }
 
 div.footer p {
-  font-size: 16px;
+  font-size: 22px;
+  color: #3c3c3c;
+  font-weight: 500;
 }

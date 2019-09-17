@@ -13,7 +13,6 @@ export default (props) => {
       <h1>
         {`${minutesStr}:${secondsStr}`}
       </h1>
-      <p>Tempo médio por voltas</p>
     </div>
   )
 }
