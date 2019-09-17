@@ -4,6 +4,5 @@ div.container{
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin: 0 auto;
-  margin-top: 5.0rem;
+  margin: 5rem auto;
 }

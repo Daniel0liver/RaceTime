@@ -12,7 +12,7 @@ body{
 }
 
 div.box {
-  width: 30%;
+  width: 40%;
   height: auto;
   background: #fff;
   padding: 20px;
@@ -30,4 +30,10 @@ div.time {
   font-weight: bold;
 }
 
+/* Responsive Design */
+@media only screen and (max-width: 400px){
+  div.box {
+    width: 100%;
+  }
+}
 

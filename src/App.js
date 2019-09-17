@@ -66,6 +66,7 @@ function App() {
     setTime(0) // Setando tempo para 0
     setNumLaps(0) // Setando o número de voltas para 0
     setTimeLaps(0) // Setando tempo por volta para 0
+    StopRunnig() // Parando o contador
     
   }
 
