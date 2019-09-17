@@ -1,18 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+import Container from './Components/Container';
 import Button from './Components/Button';
 import ShowLap from './Components/ShowLap';
-import Container from './Components/Container';
+import ShowTime from './Components/ShowTime';
+import ShowTimeLaps from './Components/ShowTimeLaps';
+
+
 import './App.css';
 
 function App() {
   const [numLaps, setNumLaps] = useState(0);
-  
-  const increment = () => {
-    setNumLaps(numLaps + 1)
+  const [runnig, setRunnig] = useState(false);
+  const [timeLaps, setTimeLaps] = useState(0)
+  const [time, setTime] = useState(0);
+
+  useEffect(() => {
+    let realTime
+
+    if (runnig) {
+      realTime = setInterval(() => {
+        setTime(old => old + 1)
+      }, 1000);
+    }
+    return () => {
+      if(realTime) { // truthy valor que é convertido para verdadeiro
+        clearInterval(realTime) // Interrompe o tempo
+      }
+    }
+    
+  }, [runnig])
+
+  const IncrementTimeLaps = () => {
+    setTimeLaps(timeLaps + 30);
   }
 
-  const decrement = () => {
-    setNumLaps(numLaps - 1)
+  const DecrementTimeLaps = () => {
+    setTimeLaps(timeLaps - 30);
+  }
+  
+  const Increment = () => {
+    setNumLaps(numLaps + 1)
+    IncrementTimeLaps()
+  }
+
+  const Decrement = () => {
+    if(numLaps > '0'){
+      setNumLaps(numLaps - 1)
+      DecrementTimeLaps()
+    }
+  }
+
+  const Runnig = () => {
+    setRunnig(true) // Iniciando o contador 
+    console.log("contando");
+    
+  }
+
+  const StopRunnig = () => {
+    setRunnig(false) // Pausando o contador
+    console.log("pausado");
+    
+  }
+
+  const Reset = () => {
+    // setRunnig(false)
+    setTime(0)
+    setNumLaps(0)
+    setTimeLaps(0)
+    console.log("resetando");
+    
   }
 
   return (
@@ -22,16 +79,30 @@ function App() {
           <ShowLap laps={numLaps} />
         </div>
         <div className="span">
-          <Button onClick={decrement}>
-            <i class="material-icons">remove</i>
+          <Button onClick={Decrement}>
+            <i className="material-icons">remove</i>
           </Button>
-          <Button onClick={increment}>
-            <i class="material-icons">add</i>
+          <Button onClick={Increment}>
+            <i className="material-icons">add</i>
           </Button>
         </div>
-      </div>
-      <div>
-
+        <div className="time">
+          <ShowTime time={Math.round(time)} /> /  <ShowTimeLaps timeLaps={timeLaps} />
+          <span>
+            <p>Tempo médio por voltas</p>
+          </span>
+        </div>
+        <div className="footer">
+          <Button  onClick={Runnig}>
+            <i className="material-icons">play_arrow</i>
+          </Button> 
+          <Button onClick={StopRunnig}>
+            <i className="material-icons">pause</i>
+          </Button>
+          <Button onClick={Reset}>
+            <i className="material-icons">replay</i>
+          </Button>
+        </div>
       </div>
     </Container>
       
