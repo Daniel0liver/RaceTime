@@ -6,7 +6,6 @@ import ShowLap from './Components/ShowLap';
 import ShowTime from './Components/ShowTime';
 import ShowTimeLaps from './Components/ShowTimeLaps';
 
-
 import './App.css';
 
 function App() {
@@ -21,8 +20,12 @@ function App() {
     if (runnig) {
       realTime = setInterval(() => {
         setTime(old => old + 1)
-      }, 1000);
+        if(time === timeLaps){
+          DecrementLaps()
+        }
+      }, 100);
     }
+    
     return () => {
       if(realTime) { // truthy valor que é convertido para verdadeiro
         clearInterval(realTime) // Interrompe o tempo
@@ -30,6 +33,10 @@ function App() {
     }
     
   }, [runnig])
+
+  const DecrementLaps = () => {
+    setNumLaps(numLaps - 1)
+  }
 
   const IncrementTimeLaps = () => {
     setTimeLaps(timeLaps + 30);
@@ -52,7 +59,9 @@ function App() {
   }
 
   const Runnig = () => {
-    setRunnig(true) // Iniciando o contador 
+    if(numLaps > '0'){ // Somente inicia se o numero de voltas for maior que 0
+      setRunnig(true) // Iniciando o contador 
+    }
     
   }
 
