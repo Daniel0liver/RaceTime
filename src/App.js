@@ -5,6 +5,7 @@ import Button from './Components/Button';
 import ShowLap from './Components/ShowLap';
 import ShowTime from './Components/ShowTime';
 import ShowTimeLaps from './Components/ShowTimeLaps';
+import Sidebar from './Components/Sidebar'
 
 import './App.css';
 
@@ -14,7 +15,7 @@ function App() {
   const [timeLaps, setTimeLaps] = useState(0)
   const [time, setTime] = useState(0);
 
-  useEffect(() => {
+  useEffect(() => { // Dica: quando passamos um array no useEffect, ele so dispara quando o props muda
     let realTime
 
     if (runnig) {
@@ -23,7 +24,7 @@ function App() {
         if(time === timeLaps){
           DecrementLaps()
         }
-      }, 100);
+      }, 1000);
     }
     
     return () => {
@@ -32,7 +33,7 @@ function App() {
       }
     }
     
-  }, [runnig])
+  }, )
 
   const DecrementLaps = () => {
     setNumLaps(numLaps - 1)
@@ -81,6 +82,17 @@ function App() {
 
   return (
     <Container>
+      <Sidebar>
+        <Button>
+          <i class="material-icons">access_alarms</i>
+        </Button>
+        <Button>
+        <i class="material-icons">add_alarm</i>
+        </Button>
+        <Button>
+          <i class="material-icons">timer</i>
+        </Button>
+      </Sidebar>
       <div className="box">
         <div className="laps">
           <ShowLap laps={numLaps} />

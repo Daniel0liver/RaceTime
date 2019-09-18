@@ -16,7 +16,7 @@ div.box {
   height: auto;
   background: #fff;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 0px 5px 0px 5px;
   display: grid;
   align-items: center;
   justify-content: center;
