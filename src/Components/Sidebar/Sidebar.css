@@ -1,7 +1,23 @@
 div.sidebar {
   width: 10%;
-  height: 100%;
-  padding: 8.3rem 0px;
+  height: 61%;
+  position: absolute;
   background: rebeccapurple;
-  border-radius: 5px 0px 5px 0px;
+  border-radius: 5px 0px 0px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.sidebar ul {
+  list-style: none;
+  display: contents;
+  justify-content: center;
+  align-items: center;
+}
+
+div.sidebar li {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
