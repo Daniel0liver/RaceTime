@@ -1,7 +1,8 @@
 div.sidebar {
-  width: 10%;
-  height: 61%;
+  width: 7%;
+  height: 66%;
   position: absolute;
+  left: 27.25%;
   background: rebeccapurple;
   border-radius: 5px 0px 0px 5px;
   display: flex;
