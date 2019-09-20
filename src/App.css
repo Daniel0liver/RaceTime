@@ -1,5 +1,6 @@
 @import url('//fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Teko:300&display=swap');
 
 html, body{
   height: 100%;
@@ -11,4 +12,18 @@ body{
 
 }
 
+div.time {
+  margin: 16px auto;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+i {
+    color: #fff;
+}
+
+a {
+  padding: 20px 30px;
+  color: #fff;
+}
 
