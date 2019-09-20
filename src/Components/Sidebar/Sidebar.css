@@ -1,10 +1,10 @@
 div.sidebar {
   width: 7%;
-  height: 66%;
+  height: 88.70%;
   position: absolute;
-  left: 27.25%;
-  background: rebeccapurple;
-  border-radius: 5px 0px 0px 5px;
+  left: 30%;
+  background: #639;
+  border-radius: 5px 0 0 5px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,8 +1,7 @@
 import React from 'react';
 import './Sidebar.css';
 
-
-export default (props) => {
+export default (props, { children }) => {
   return(
     <div className="sidebar menu">
       <ul>
