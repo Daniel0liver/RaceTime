@@ -7,6 +7,28 @@ div.container{
   padding: 15px;
 }
 
+@media only screen and (max-width: 940px){
+  div.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  div.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+}
+
 @media only screen and (max-width: 400px){
   div.container {
     width: 100%;

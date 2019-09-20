@@ -23,6 +23,36 @@ div.sidebar li {
   align-items: center;
 }
 
+
+@media only screen and (max-width: 940px){
+  div.sidebar {
+    width: 10%;
+    height: 143.7%;
+    position: absolute;
+    left: 1%;
+    background: #639;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media only screen and (max-width: 700px){
+  div.sidebar {
+    width: 17%;
+    height: 87.7%;
+    position: absolute;
+    left: 1%;
+    background: #639;
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 @media only screen and (max-width: 400px){
   div.sidebar {
     width: 17%;
