@@ -1,10 +1,10 @@
 import React, { useState, useEffect} from 'react';
 
-import Layout from '../Components/Layout';
 import Button from '../Components/Button';
 import ShowLap from '../Components/ShowLap';
 import ShowTime from '../Components/ShowTime';
 import ShowTimeLaps from '../Components/ShowTimeLaps';
+import Layout from '../Components/Layout';
 
 export default () => {
     const [numLaps, setNumLaps] = useState(0);
@@ -79,7 +79,7 @@ export default () => {
 
 
     return(
-        <Layout>
+      <Layout>
         <div className="box">
           <h1 className="title">Corrida</h1>
           <div className="laps">

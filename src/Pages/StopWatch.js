@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import Layout from '../Components/Layout';
 import Button from '../Components/Button';
-import ShowLap from '../Components/ShowLap';
 import ShowTime from '../Components/ShowTime';
-import ShowTimeLaps from '../Components/ShowTimeLaps';
+import Layout from '../Components/Layout';
 
 export default () => {
   const [runnig, setRunnig] = useState(false);
@@ -46,28 +44,28 @@ export default () => {
 
 
 	return(
-		<Layout>
-      <div className="box">
+    <Layout>
+      <div className="box-stopwatch">
         <h1 className="title">Cronômetro</h1>
-          <div className="time">
-            <ShowTime time={Math.round(time)} />
-            <span>
-              <p>Tempo médio</p>
-            </span>
-          </div>
-          <div className="footer">
-            <Button  onClick={Runnig}>
-              <i className="material-icons">play_arrow</i>
-            </Button> 
-            <Button onClick={StopRunnig}>
-              <i className="material-icons">pause</i>
-            </Button>
-            <Button onClick={Reset}>
-              <i className="material-icons">replay</i>
-            </Button>
-          </div>
+        <div className="time stopwatch">
+          <ShowTime time={Math.round(time)} />
+          <span>
+            <p>Tempo médio</p>
+          </span>
         </div>
-		</Layout>
+        <div className="footer">
+          <Button  onClick={Runnig}>
+            <i className="material-icons">play_arrow</i>
+          </Button> 
+          <Button onClick={StopRunnig}>
+            <i className="material-icons">pause</i>
+          </Button>
+          <Button onClick={Reset}>
+            <i className="material-icons">replay</i>
+          </Button>
+        </div>
+      </div>
+    </Layout>
 	)
 }
 
