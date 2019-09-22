@@ -6,7 +6,9 @@ import './Layout.css';
 export default  ({ children }) => {
   return (
     <Container>
-      {children}
+      <div className="box">
+        {children}
+      </div>
     </Container>
   )
 }
