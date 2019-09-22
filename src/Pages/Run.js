@@ -80,7 +80,7 @@ export default () => {
 
     return(
       <Layout>
-        <div className="box">
+        <div className="box-run">
           <h1 className="title">Corrida</h1>
           <div className="laps">
             <ShowLap laps={numLaps} />

@@ -64,7 +64,7 @@ export default () => {
             <i className="material-icons">replay</i>
           </Button>
         </div>
-      </div>
+        </div>
     </Layout>
 	)
 }
