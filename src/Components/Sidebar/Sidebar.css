@@ -1,15 +1,15 @@
 div.sidebar {
   width: 7%;
   z-index: 1;
-  height: 68%;
+  height: 74%;
   position: absolute;
-  left: 29%;
+  left: 27%;
   background: #639;
   border-radius: 5px 0 0 5px;
   display: flex;
+  margin-top: 5rem;
   justify-content: center;
   align-items: center;
-  margin-top: 6rem;
 }
 
 div.sidebar ul {

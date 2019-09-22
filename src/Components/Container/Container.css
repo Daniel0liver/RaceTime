@@ -3,8 +3,7 @@ div.container{
   height: auto;
   display: flex;
   justify-content: center;
-  position: absolute;
-  margin-top: 6rem;
+  padding-top: 5rem;
 }
 
 @media only screen and (max-width: 940px){
