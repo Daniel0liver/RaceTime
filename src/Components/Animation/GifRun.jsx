@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './GifRun.css';
-import SportGif from '../../Gifs/sportyslob.gif';
+import SportGif from '../../Gifs/giphy.gif';
 
 export default () => {
   return (

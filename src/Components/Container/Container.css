@@ -4,6 +4,7 @@ div.container{
   display: flex;
   justify-content: center;
   padding-top: 5rem;
+  position: absolute;
 }
 
 @media only screen and (max-width: 940px){
