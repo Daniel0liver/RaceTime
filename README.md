@@ -1,9 +1,9 @@
 # Images 
 
 <p float="left">
-  <img src="/Assets/home.png" width="100" />
-  <img src="/Assets/running.png" width="100" /> 
-  <img src="/Assets/stopwatch.png" width="100" />
+  <img src="/Assets/home.png" width="500" />
+  <img src="/Assets/running.png" width="500" /> 
+  <img src="/Assets/stopwatch.png" width="500" />
 </p>
 
 # RaceTime
